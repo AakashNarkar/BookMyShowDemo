@@ -9,8 +9,9 @@ import Foundation
 
 // MARK: - Constants
 struct Constants {
-    // Cells
+    // Views
     static let studentTableViewCell = "StudentTableViewCell"
+    static let studentDetailViewController = "StudentDetailViewController"
    
     // URLs
     static let baseURL = "https://run.mocky.io/v3/"

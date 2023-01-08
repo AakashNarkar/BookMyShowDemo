@@ -27,6 +27,10 @@
 		926B39D0296A83BD0040BF4F /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39CF296A83BD0040BF4F /* CustomLoader.swift */; };
 		926B39D2296A8D260040BF4F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39D1296A8D260040BF4F /* BaseViewController.swift */; };
 		926B39D6296A93AC0040BF4F /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */; };
+		927D35B0296ABFE600588444 /* UIView+Extennsion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D35AF296ABFE600588444 /* UIView+Extennsion.swift */; };
+		927D35B3296AC1D000588444 /* StudentDetailViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 927D35B2296AC1D000588444 /* StudentDetailViewController.storyboard */; };
+		927D35B5296AC1F500588444 /* StudentDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D35B4296AC1F500588444 /* StudentDetailViewController.swift */; };
+		927D35B7296AC38B00588444 /* StudentDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927D35B6296AC38B00588444 /* StudentDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +75,10 @@
 		926B39CF296A83BD0040BF4F /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
 		926B39D1296A8D260040BF4F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
+		927D35AF296ABFE600588444 /* UIView+Extennsion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extennsion.swift"; sourceTree = "<group>"; };
+		927D35B2296AC1D000588444 /* StudentDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StudentDetailViewController.storyboard; sourceTree = "<group>"; };
+		927D35B4296AC1F500588444 /* StudentDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewController.swift; sourceTree = "<group>"; };
+		927D35B6296AC38B00588444 /* StudentDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -199,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				926B39D3296A8DF80040BF4F /* StudenrList */,
+				927D35B1296AC1A300588444 /* StudentDetail */,
 				926B39D1296A8D260040BF4F /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
@@ -225,6 +234,7 @@
 			isa = PBXGroup;
 			children = (
 				92192FB12969FDE00004148D /* StudentListViewModel.swift */,
+				927D35B6296AC38B00588444 /* StudentDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -260,8 +270,18 @@
 			isa = PBXGroup;
 			children = (
 				926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */,
+				927D35AF296ABFE600588444 /* UIView+Extennsion.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		927D35B1296AC1A300588444 /* StudentDetail */ = {
+			isa = PBXGroup;
+			children = (
+				927D35B4296AC1F500588444 /* StudentDetailViewController.swift */,
+				927D35B2296AC1D000588444 /* StudentDetailViewController.storyboard */,
+			);
+			path = StudentDetail;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,6 +390,7 @@
 			files = (
 				92192F852969FD040004148D /* LaunchScreen.storyboard in Resources */,
 				92192F822969FD040004148D /* Assets.xcassets in Resources */,
+				927D35B3296AC1D000588444 /* StudentDetailViewController.storyboard in Resources */,
 				92192F802969FD030004148D /* StudentListViewController.storyboard in Resources */,
 				920751D3296A01E8002FE369 /* StudentTableViewCell.xib in Resources */,
 			);
@@ -398,6 +419,7 @@
 			files = (
 				92192FB82969FE330004148D /* Constant.swift in Sources */,
 				92192FB62969FE210004148D /* NetworkManager.swift in Sources */,
+				927D35B5296AC1F500588444 /* StudentDetailViewController.swift in Sources */,
 				926B39CE296A7FFB0040BF4F /* APIManager.swift in Sources */,
 				926B39D0296A83BD0040BF4F /* CustomLoader.swift in Sources */,
 				92192FB22969FDE00004148D /* StudentListViewModel.swift in Sources */,
@@ -408,7 +430,9 @@
 				92192F7B2969FD030004148D /* SceneDelegate.swift in Sources */,
 				92192FAB2969FD6E0004148D /* StudentModel.swift in Sources */,
 				926B39CC296A7FAE0040BF4F /* ServiceAPI.swift in Sources */,
+				927D35B7296AC38B00588444 /* StudentDetailViewModel.swift in Sources */,
 				920751D2296A01E8002FE369 /* StudentTableViewCell.swift in Sources */,
+				927D35B0296ABFE600588444 /* UIView+Extennsion.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
