@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+struct Constants {
+    static let navigationTitle = "Swift Student Challange"
+    
+    static let studentTableViewCell = "StudentTableViewCell"
+}
