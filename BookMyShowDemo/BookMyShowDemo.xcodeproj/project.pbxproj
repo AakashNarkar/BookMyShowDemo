@@ -7,16 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920751D2296A01E8002FE369 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920751D0296A01E8002FE369 /* StudentTableViewCell.swift */; };
+		920751D3296A01E8002FE369 /* StudentTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 920751D1296A01E8002FE369 /* StudentTableViewCell.xib */; };
 		92192F792969FD030004148D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F782969FD030004148D /* AppDelegate.swift */; };
 		92192F7B2969FD030004148D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F7A2969FD030004148D /* SceneDelegate.swift */; };
-		92192F7D2969FD030004148D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F7C2969FD030004148D /* ViewController.swift */; };
-		92192F802969FD030004148D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92192F7E2969FD030004148D /* Main.storyboard */; };
+		92192F7D2969FD030004148D /* StudentListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F7C2969FD030004148D /* StudentListViewController.swift */; };
+		92192F802969FD030004148D /* StudentListViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92192F7E2969FD030004148D /* StudentListViewController.storyboard */; };
 		92192F822969FD040004148D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 92192F812969FD040004148D /* Assets.xcassets */; };
 		92192F852969FD040004148D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 92192F832969FD040004148D /* LaunchScreen.storyboard */; };
 		92192F902969FD040004148D /* BookMyShowDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F8F2969FD040004148D /* BookMyShowDemoTests.swift */; };
 		92192F9A2969FD040004148D /* BookMyShowDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F992969FD040004148D /* BookMyShowDemoUITests.swift */; };
 		92192F9C2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F9B2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift */; };
-		92192FAB2969FD6E0004148D /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FAA2969FD6E0004148D /* Model.swift */; };
+		92192FAB2969FD6E0004148D /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FAA2969FD6E0004148D /* StudentModel.swift */; };
 		92192FB22969FDE00004148D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB12969FDE00004148D /* ViewModel.swift */; };
 		92192FB62969FE210004148D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB52969FE210004148D /* NetworkManager.swift */; };
 		92192FB82969FE330004148D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB72969FE330004148D /* Constant.swift */; };
@@ -40,11 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		920751D0296A01E8002FE369 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
+		920751D1296A01E8002FE369 /* StudentTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StudentTableViewCell.xib; sourceTree = "<group>"; };
 		92192F752969FD030004148D /* BookMyShowDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BookMyShowDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		92192F782969FD030004148D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		92192F7A2969FD030004148D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		92192F7C2969FD030004148D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		92192F7F2969FD030004148D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		92192F7C2969FD030004148D /* StudentListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewController.swift; sourceTree = "<group>"; };
+		92192F7F2969FD030004148D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/StudentListViewController.storyboard; sourceTree = "<group>"; };
 		92192F812969FD040004148D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		92192F842969FD040004148D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		92192F862969FD040004148D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,7 +57,7 @@
 		92192F952969FD040004148D /* BookMyShowDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BookMyShowDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		92192F992969FD040004148D /* BookMyShowDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMyShowDemoUITests.swift; sourceTree = "<group>"; };
 		92192F9B2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMyShowDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		92192FAA2969FD6E0004148D /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		92192FAA2969FD6E0004148D /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
 		92192FB12969FDE00004148D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		92192FB52969FE210004148D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		92192FB72969FE330004148D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -84,6 +88,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		920751CE296A01A1002FE369 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				920751D0296A01E8002FE369 /* StudentTableViewCell.swift */,
+				920751D1296A01E8002FE369 /* StudentTableViewCell.xib */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
+		920751CF296A01B5002FE369 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
 		92192F6C2969FD030004148D = {
 			isa = PBXGroup;
 			children = (
@@ -149,7 +169,7 @@
 		92192FA92969FD570004148D /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				92192FAA2969FD6E0004148D /* Model.swift */,
+				92192FAA2969FD6E0004148D /* StudentModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,8 +187,8 @@
 		92192FAD2969FD850004148D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92192F7C2969FD030004148D /* ViewController.swift */,
-				92192F7E2969FD030004148D /* Main.storyboard */,
+				92192F7C2969FD030004148D /* StudentListViewController.swift */,
+				92192F7E2969FD030004148D /* StudentListViewController.storyboard */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -183,6 +203,8 @@
 		92192FAF2969FDAA0004148D /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				920751CE296A01A1002FE369 /* TableViewCells */,
+				920751CF296A01B5002FE369 /* CollectionViewCells */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -317,7 +339,8 @@
 			files = (
 				92192F852969FD040004148D /* LaunchScreen.storyboard in Resources */,
 				92192F822969FD040004148D /* Assets.xcassets in Resources */,
-				92192F802969FD030004148D /* Main.storyboard in Resources */,
+				92192F802969FD030004148D /* StudentListViewController.storyboard in Resources */,
+				920751D3296A01E8002FE369 /* StudentTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,10 +368,11 @@
 				92192FB82969FE330004148D /* Constant.swift in Sources */,
 				92192FB62969FE210004148D /* NetworkManager.swift in Sources */,
 				92192FB22969FDE00004148D /* ViewModel.swift in Sources */,
-				92192F7D2969FD030004148D /* ViewController.swift in Sources */,
+				92192F7D2969FD030004148D /* StudentListViewController.swift in Sources */,
 				92192F792969FD030004148D /* AppDelegate.swift in Sources */,
 				92192F7B2969FD030004148D /* SceneDelegate.swift in Sources */,
-				92192FAB2969FD6E0004148D /* Model.swift in Sources */,
+				92192FAB2969FD6E0004148D /* StudentModel.swift in Sources */,
+				920751D2296A01E8002FE369 /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,12 +409,12 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		92192F7E2969FD030004148D /* Main.storyboard */ = {
+		92192F7E2969FD030004148D /* StudentListViewController.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				92192F7F2969FD030004148D /* Base */,
 			);
-			name = Main.storyboard;
+			name = StudentListViewController.storyboard;
 			sourceTree = "<group>";
 		};
 		92192F832969FD040004148D /* LaunchScreen.storyboard */ = {
@@ -529,7 +553,7 @@
 				INFOPLIST_FILE = BookMyShowDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = StudentListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,7 +580,7 @@
 				INFOPLIST_FILE = BookMyShowDemo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = StudentListViewController;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
