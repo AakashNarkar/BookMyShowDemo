@@ -19,7 +19,7 @@
 		92192F9A2969FD040004148D /* BookMyShowDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F992969FD040004148D /* BookMyShowDemoUITests.swift */; };
 		92192F9C2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192F9B2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift */; };
 		92192FAB2969FD6E0004148D /* StudentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FAA2969FD6E0004148D /* StudentModel.swift */; };
-		92192FB22969FDE00004148D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB12969FDE00004148D /* ViewModel.swift */; };
+		92192FB22969FDE00004148D /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB12969FDE00004148D /* StudentListViewModel.swift */; };
 		92192FB62969FE210004148D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB52969FE210004148D /* NetworkManager.swift */; };
 		92192FB82969FE330004148D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB72969FE330004148D /* Constant.swift */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		92192F992969FD040004148D /* BookMyShowDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMyShowDemoUITests.swift; sourceTree = "<group>"; };
 		92192F9B2969FD040004148D /* BookMyShowDemoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookMyShowDemoUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		92192FAA2969FD6E0004148D /* StudentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentModel.swift; sourceTree = "<group>"; };
-		92192FB12969FDE00004148D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		92192FB12969FDE00004148D /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
 		92192FB52969FE210004148D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		92192FB72969FE330004148D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -212,7 +212,7 @@
 		92192FB02969FDC80004148D /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				92192FB12969FDE00004148D /* ViewModel.swift */,
+				92192FB12969FDE00004148D /* StudentListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -367,7 +367,7 @@
 			files = (
 				92192FB82969FE330004148D /* Constant.swift in Sources */,
 				92192FB62969FE210004148D /* NetworkManager.swift in Sources */,
-				92192FB22969FDE00004148D /* ViewModel.swift in Sources */,
+				92192FB22969FDE00004148D /* StudentListViewModel.swift in Sources */,
 				92192F7D2969FD030004148D /* StudentListViewController.swift in Sources */,
 				92192F792969FD030004148D /* AppDelegate.swift in Sources */,
 				92192F7B2969FD030004148D /* SceneDelegate.swift in Sources */,
