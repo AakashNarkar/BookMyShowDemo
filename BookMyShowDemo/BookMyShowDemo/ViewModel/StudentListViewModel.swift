@@ -12,14 +12,35 @@ protocol StudentViewModelProtocol: AnyObject {
     func getNumberOfRows() -> Int
     func getStudent(index: Int) -> StudentModel
     func updateStudent(isSelected: Bool, index: Int)
+    var delegate: StudentViewModelAPIProtocol? { get set }
+}
+
+// MARK: - StudentViewModelAPIProtocol
+protocol StudentViewModelAPIProtocol: AnyObject {
+    func didCallAPI()
+    func didApiFailed(error: String)
 }
 
 // MARK: - StudentViewModel
 class StudentListViewModel: StudentViewModelProtocol {
+    let service: ServiceAPIProtocol!
+    var studentList = [StudentModel]()
     
-    var studentList = [
-        StudentModel(name: "Name", university: "university", gpa: 2.3, skills: "ios Dev"),
-    ]
+    weak var delegate: StudentViewModelAPIProtocol?
+    
+    init() {
+        service = ServiceAPI()
+        service.getMatchDetails(apiMethod: .getStudentData) { [weak self] response in
+            guard let strongSelf = self else { return }
+            switch response {
+            case .success(let model):
+                strongSelf.studentList = model
+                strongSelf.delegate?.didCallAPI()
+            case .failure(let error):
+                strongSelf.delegate?.didApiFailed(error: error.localizedDescription)
+            }
+        }
+    }
     
     func getNumberOfRows() -> Int {
         studentList.count

@@ -12,5 +12,5 @@ struct StudentModel: Codable {
     let name, university: String
     let gpa: Double
     let skills: String
-    var isSelected: Bool = false
+    var isSelected: Bool?
 }
