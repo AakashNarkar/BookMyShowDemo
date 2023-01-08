@@ -22,6 +22,11 @@
 		92192FB22969FDE00004148D /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB12969FDE00004148D /* StudentListViewModel.swift */; };
 		92192FB62969FE210004148D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB52969FE210004148D /* NetworkManager.swift */; };
 		92192FB82969FE330004148D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92192FB72969FE330004148D /* Constant.swift */; };
+		926B39CC296A7FAE0040BF4F /* ServiceAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39CB296A7FAE0040BF4F /* ServiceAPI.swift */; };
+		926B39CE296A7FFB0040BF4F /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39CD296A7FFB0040BF4F /* APIManager.swift */; };
+		926B39D0296A83BD0040BF4F /* CustomLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39CF296A83BD0040BF4F /* CustomLoader.swift */; };
+		926B39D2296A8D260040BF4F /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39D1296A8D260040BF4F /* BaseViewController.swift */; };
+		926B39D6296A93AC0040BF4F /* UINavigationItem+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +66,11 @@
 		92192FB12969FDE00004148D /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
 		92192FB52969FE210004148D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		92192FB72969FE330004148D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		926B39CB296A7FAE0040BF4F /* ServiceAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceAPI.swift; sourceTree = "<group>"; };
+		926B39CD296A7FFB0040BF4F /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		926B39CF296A83BD0040BF4F /* CustomLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomLoader.swift; sourceTree = "<group>"; };
+		926B39D1296A8D260040BF4F /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationItem+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +143,7 @@
 				92192FB02969FDC80004148D /* ViewModel */,
 				92192FB32969FDEC0004148D /* Networking */,
 				92192FB42969FDFE0004148D /* Utils */,
+				926B39D4296A93810040BF4F /* Extensions */,
 				92192F812969FD040004148D /* Assets.xcassets */,
 				92192F832969FD040004148D /* LaunchScreen.storyboard */,
 				92192F862969FD040004148D /* Info.plist */,
@@ -187,8 +198,8 @@
 		92192FAD2969FD850004148D /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				92192F7C2969FD030004148D /* StudentListViewController.swift */,
-				92192F7E2969FD030004148D /* StudentListViewController.storyboard */,
+				926B39D3296A8DF80040BF4F /* StudenrList */,
+				926B39D1296A8D260040BF4F /* BaseViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -196,6 +207,7 @@
 		92192FAE2969FD9C0004148D /* CustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				926B39CF296A83BD0040BF4F /* CustomLoader.swift */,
 			);
 			path = CustomViews;
 			sourceTree = "<group>";
@@ -221,6 +233,8 @@
 			isa = PBXGroup;
 			children = (
 				92192FB52969FE210004148D /* NetworkManager.swift */,
+				926B39CB296A7FAE0040BF4F /* ServiceAPI.swift */,
+				926B39CD296A7FFB0040BF4F /* APIManager.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -231,6 +245,23 @@
 				92192FB72969FE330004148D /* Constant.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		926B39D3296A8DF80040BF4F /* StudenrList */ = {
+			isa = PBXGroup;
+			children = (
+				92192F7C2969FD030004148D /* StudentListViewController.swift */,
+				92192F7E2969FD030004148D /* StudentListViewController.storyboard */,
+			);
+			path = StudenrList;
+			sourceTree = "<group>";
+		};
+		926B39D4296A93810040BF4F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				926B39D5296A93AC0040BF4F /* UINavigationItem+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,11 +398,16 @@
 			files = (
 				92192FB82969FE330004148D /* Constant.swift in Sources */,
 				92192FB62969FE210004148D /* NetworkManager.swift in Sources */,
+				926B39CE296A7FFB0040BF4F /* APIManager.swift in Sources */,
+				926B39D0296A83BD0040BF4F /* CustomLoader.swift in Sources */,
 				92192FB22969FDE00004148D /* StudentListViewModel.swift in Sources */,
+				926B39D2296A8D260040BF4F /* BaseViewController.swift in Sources */,
 				92192F7D2969FD030004148D /* StudentListViewController.swift in Sources */,
 				92192F792969FD030004148D /* AppDelegate.swift in Sources */,
+				926B39D6296A93AC0040BF4F /* UINavigationItem+Extension.swift in Sources */,
 				92192F7B2969FD030004148D /* SceneDelegate.swift in Sources */,
 				92192FAB2969FD6E0004148D /* StudentModel.swift in Sources */,
+				926B39CC296A7FAE0040BF4F /* ServiceAPI.swift in Sources */,
 				920751D2296A01E8002FE369 /* StudentTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -532,7 +568,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -7,8 +7,9 @@
 
 import UIKit
 
-class StudentListViewController: UIViewController {
-
+// MARK: - StudentListViewController
+class StudentListViewController: BaseViewController {
+    
     @IBOutlet weak var studentTableView: UITableView!
     
     var viewModel: StudentViewModelProtocol!
@@ -18,6 +19,7 @@ class StudentListViewController: UIViewController {
         
         setupUI()
         viewModel = StudentListViewModel()
+        viewModel.delegate = self
     }
 
     // MARK: - setupUI
@@ -25,7 +27,6 @@ class StudentListViewController: UIViewController {
         studentTableView.delegate = self
         studentTableView.dataSource = self
         studentTableView.register(UINib(nibName: Constants.studentTableViewCell, bundle: nil), forCellReuseIdentifier: Constants.studentTableViewCell)
-        title = Constants.navigationTitle
     }
 }
 
@@ -47,8 +48,28 @@ extension StudentListViewController: UITableViewDelegate, UITableViewDataSource 
 
 // MARK: - StudentTableViewCellProtocol
 extension StudentListViewController: StudentTableViewCellProtocol {
-    func didSelectShortList(isSelected: Bool, index: Int) {
+    func didSelectShortList(isSelected: Bool, index: Int, studentName: String) {
         viewModel.updateStudent(isSelected: isSelected, index: index)
         studentTableView.reloadData()
+        if isSelected {
+            showAlert(title: Constants.alertMessage.replacingOccurrences(of: "%d", with: studentName, options: .literal, range: nil))
+        }
+    }
+}
+
+// MARK: - StudentViewModelAPIProtocol
+extension StudentListViewController: StudentViewModelAPIProtocol {
+    func didCallAPI() {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.studentTableView.reloadData()
+        }
+    }
+    
+    func didApiFailed(error: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.showAlert(message: error)
+        }
     }
 }

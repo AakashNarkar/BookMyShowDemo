@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -10,15 +11,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="143" id="KGk-i7-Jjw" customClass="StudentTableViewCell" customModule="BookMyShowDemo" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="475" height="143"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="156" id="KGk-i7-Jjw" customClass="StudentTableViewCell" customModule="BookMyShowDemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="475" height="156"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="475" height="143"/>
+                <rect key="frame" x="0.0" y="0.0" width="475" height="156"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Alt-3F-gT4">
-                        <rect key="frame" x="16" y="16" width="443" height="150"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Alt-3F-gT4">
+                        <rect key="frame" x="16" y="16" width="443" height="124"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="VaA-Dw-Ih2">
                                 <rect key="frame" x="0.0" y="0.0" width="443" height="30"/>
@@ -86,10 +87,10 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hfZ-zx-LcT">
-                                <rect key="frame" x="0.0" y="70" width="443" height="50"/>
+                                <rect key="frame" x="0.0" y="70" width="443" height="24"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GPA: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuj-li-fMd">
-                                        <rect key="frame" x="0.0" y="0.0" width="75" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="75" id="2Dl-Yt-qnk"/>
                                         </constraints>
@@ -98,7 +99,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rUf-eE-2Ja">
-                                        <rect key="frame" x="75" y="0.0" width="368" height="50"/>
+                                        <rect key="frame" x="75" y="0.0" width="368" height="24"/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="zWt-V1-9KO"/>
                                         </constraints>
@@ -109,7 +110,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="yDI-nd-pOA">
-                                <rect key="frame" x="0.0" y="130" width="443" height="20"/>
+                                <rect key="frame" x="0.0" y="104" width="443" height="20"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Skills: " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4lk-fT-bUI">
                                         <rect key="frame" x="0.0" y="0.0" width="75" height="17"/>
@@ -143,13 +144,14 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="buttonWidth" destination="teb-Ha-OQp" id="dfz-Q3-Sr6"/>
                 <outlet property="gpaLabel" destination="rUf-eE-2Ja" id="rLb-qO-6qB"/>
                 <outlet property="shortListButton" destination="A8L-DZ-qql" id="6zJ-cj-ZGn"/>
                 <outlet property="skillsLabel" destination="eHG-ty-R1R" id="3OQ-fU-qE2"/>
                 <outlet property="studentNameLabel" destination="TSc-aq-SA5" id="OtR-5b-3Pw"/>
                 <outlet property="universityLabel" destination="t6F-iX-det" id="gie-Q0-xcH"/>
             </connections>
-            <point key="canvasLocation" x="254.19847328244273" y="64.436619718309856"/>
+            <point key="canvasLocation" x="254.19847328244273" y="68.309859154929583"/>
         </tableViewCell>
     </objects>
     <resources>
