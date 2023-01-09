@@ -10,7 +10,7 @@ import Foundation
 // MARK: - StudentViewModelProtocol
 protocol StudentViewModelProtocol: AnyObject {
     func getNumberOfRows() -> Int
-    func getStudent(index: Int) -> StudentModel
+    func getStudent(index: Int) -> StudentModel?
     func updateStudent(isSelected: Bool, index: Int)
     var delegate: StudentViewModelAPIProtocol? { get set }
 }
@@ -23,14 +23,14 @@ protocol StudentViewModelAPIProtocol: AnyObject {
 
 // MARK: - StudentViewModel
 class StudentListViewModel: StudentViewModelProtocol {
-    let service: ServiceAPIProtocol!
-    var studentList = [StudentModel]()
+    let service: ServiceAPIProtocol?
+    var studentList: [StudentModel]?
     
     weak var delegate: StudentViewModelAPIProtocol?
     
     init() {
         service = ServiceAPI()
-        service.getMatchDetails(apiMethod: .getStudentData) { [weak self] response in
+        service?.getMatchDetails(apiMethod: .getStudentData) { [weak self] response in
             guard let strongSelf = self else { return }
             switch response {
             case .success(let model):
@@ -43,14 +43,14 @@ class StudentListViewModel: StudentViewModelProtocol {
     }
     
     func getNumberOfRows() -> Int {
-        studentList.count
+        studentList?.count ?? 0
     }
     
-    func getStudent(index: Int) -> StudentModel  {
-        return studentList[index]
+    func getStudent(index: Int) -> StudentModel?  {
+        return studentList?[index]
     }
     
     func updateStudent(isSelected: Bool, index: Int) {
-        studentList[index].isSelected = isSelected
+        studentList?[index].isSelected = isSelected
     }
 }

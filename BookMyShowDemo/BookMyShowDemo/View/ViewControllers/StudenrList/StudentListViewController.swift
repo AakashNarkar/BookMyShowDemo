@@ -64,7 +64,7 @@ extension StudentListViewController: StudentTableViewCellProtocol {
         viewModel?.updateStudent(isSelected: isSelected, index: index)
         studentTableView.reloadData()
         if isSelected {
-            showAlert(title: Constants.alertMessage.replacingOccurrences(of: "%d", with: studentName, options: .literal, range: nil))
+            showAlert(title: Constants.alertMessage.replacingOccurrences(of: "%d", with: studentName))
         }
     }
 }
