@@ -21,11 +21,18 @@ struct Constants {
     static let loading = "Loading"
     static let okAlerTitle = "OK"
     static let appName = "WWDC 2022"
+    static let studentName = "Name: %d"
+    static let universityName = "University: %d"
+    static let gpa = "GPA: %d"
+    static let skills = "Skills: %d"
     static let alertMessage = "%d Shortlisted"
     static let shortlisted = "Shortlisted"
     static let shortlist = "Shortlist"
     static let navigationTitle = "Swift Student Challange"
     static let navigationSubTitle = "WWDC 2022"
+    
+    // Image Constant
+    static let navigationBackButtonnImage = "chevron.backward"
 }
 
 enum CustomError: String, Error {

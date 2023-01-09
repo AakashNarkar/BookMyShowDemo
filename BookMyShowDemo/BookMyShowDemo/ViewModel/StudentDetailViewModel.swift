@@ -11,6 +11,7 @@ import Foundation
 protocol StudentDetailViewModelProtocol: AnyObject {
     var student: StudentModel { get }
     var index: Int { get }
+    var isStudentShortlisted: Bool { get set }
 }
 
 class StudentDetailViewModel: StudentDetailViewModelProtocol {
@@ -18,7 +19,12 @@ class StudentDetailViewModel: StudentDetailViewModelProtocol {
     var student: StudentModel
     
     var isStudentShortlisted: Bool {
-        student.isSelected ?? false
+        get {
+            student.isSelected ?? false
+        }
+        set {
+            student.isSelected = newValue
+        }
     }
     
     init(student: StudentModel, index: Int) {

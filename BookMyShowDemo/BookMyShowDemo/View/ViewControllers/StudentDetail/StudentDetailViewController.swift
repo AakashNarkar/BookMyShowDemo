@@ -7,7 +7,7 @@
 
 import UIKit
 
-class StudentDetailViewController: UIViewController {
+class StudentDetailViewController: BaseViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var universityLabel: UILabel!
@@ -27,15 +27,14 @@ class StudentDetailViewController: UIViewController {
     
     // MARK: - setupUI
     func setupUI() {
-        if let viewModel = viewModel {
-            let student = viewModel.student
-            self.nameLabel.text = "Name: \(student.name)"
-            self.universityLabel.text = "University:  \(student.university)"
-            self.gpaLabel.text = "GPA: \(student.gpa)"
-            self.skillsLabel.text = "Skills: \(student.skills)"
-            let title = student.isSelected ?? false ? Constants.shortlisted : Constants.shortlist
-            self.setupButton(title: title, isSelected: student.isSelected ?? false)
-        }
+        guard let viewModel = viewModel else { return }
+        let student = viewModel.student
+        self.nameLabel.text = Constants.studentName.replacingOccurrences(of: "%d", with: student.name)
+        self.universityLabel.text = Constants.universityName.replacingOccurrences(of: "%d", with: student.university)
+        self.gpaLabel.text = Constants.gpa.replacingOccurrences(of: "%d", with: String(student.gpa))
+        self.skillsLabel.text = Constants.skills.replacingOccurrences(of: "%d", with: student.skills)
+        let title = viewModel.isStudentShortlisted ? Constants.shortlisted : Constants.shortlist
+        self.setupButton(title: title, isSelected: viewModel.isStudentShortlisted)
     }
     
     func setupButton(title: String, isSelected: Bool) {
@@ -47,12 +46,10 @@ class StudentDetailViewController: UIViewController {
     }
     
     @IBAction func shortListButtonAction(_ sender: UIButton) {
-        if let viewModel = viewModel {
-            var student = viewModel.student
-            student.isSelected = !(student.isSelected ?? false)
-            let title = student.isSelected ?? false ? Constants.shortlisted : Constants.shortlist
-            self.setupButton(title: title, isSelected: student.isSelected ?? false)
-            delegate?.didSelectShortList(isSelected: student.isSelected ?? false, index: viewModel.index, studentName: viewModel.student.name)
-        }
+        guard let viewModel = viewModel else { return }
+        viewModel.isStudentShortlisted = !viewModel.isStudentShortlisted
+        let title = viewModel.isStudentShortlisted ? Constants.shortlisted : Constants.shortlist
+        self.setupButton(title: title, isSelected: viewModel.isStudentShortlisted)
+        delegate?.didSelectShortList(isSelected: viewModel.isStudentShortlisted, index: viewModel.index, studentName: viewModel.student.name)
     }
 }
